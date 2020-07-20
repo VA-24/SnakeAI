@@ -32,6 +32,7 @@ def getpath(food1, snake1):
     openset = [snake1[-1]]
     closedset = []
     dir_array1 = []
+    #This next part defines the f, g, and h scores for the alg
     while 1:
         current1 = min(openset, key=lambda x: x.f) #takes the index of an item f in list x, sets that as the key
         openset = [openset[i] for i in range(len(openset)) if not openset[i] == current1]
